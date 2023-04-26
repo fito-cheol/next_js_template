@@ -7,6 +7,12 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <Link href="dashboard"> Dashboard </Link>
+        <Image
+          src="/images/Belica.webp" // 프로필 사진 경로
+          height={180}
+          width={140}
+          alt="belica"
+        />
       </div>
     </main>
   );
