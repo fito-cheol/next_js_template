@@ -9,8 +9,8 @@ export const metadata = {
   description: "Showing template",
   icons: {
     // https://beta.nextjs.org/docs/api-reference/metadata#icons
-    icon: "static/favicon.ico",
-    shortcut: ["static/favicon.ico"],
+    icon: "/images/favicon.ico",
+    shortcut: "/images/favicon.ico",
   },
 };
 
