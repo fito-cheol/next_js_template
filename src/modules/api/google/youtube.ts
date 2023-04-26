@@ -46,7 +46,7 @@ interface GetVideoFormat {
   part: string; // snippet
   id: string; // hfcpJx8J4Bk
   locale: string; // 대한민국
-  key: string; // 'AIzaSyBGQ9PIYkwxk6iCSstQ5o-Pvt9CPeevzno'
+  key: string;
 }
 
 export async function getVideo(data: GetVideoFormat) {
