@@ -1,11 +1,11 @@
 # next_js_template
 
+## To Do
 
-
-## To Do 
 <ol>
-<li>Typescript with gloabal type</li>
+<li>Typescript with gloabal type</li> V
 <li>Sass with scoped and pre-loaded file for mixin</li>
+<li>Asset File System - import image dynamicaly </li>
 <li>Router</li>
 <li>page, component</li>
 <li>Api - Axios, ReactQuery</li>
