@@ -19,3 +19,5 @@
 <li>Eslint, Prettier </li>
 <li>Husky </li>
 </ol>
+
+structure ref: https://dev.to/vadorequest/a-2021-guide-about-structuring-your-next-js-project-in-a-flexible-and-efficient-way-472

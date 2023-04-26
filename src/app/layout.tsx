@@ -1,5 +1,6 @@
 import "./globals.scss";
 import { Inter } from "next/font/google";
+import Header from "common/components/Header/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <h1> Global Layout like appbar </h1>
+        <Header />
         {children}
       </body>
     </html>
