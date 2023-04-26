@@ -8,7 +8,7 @@ import axios from "axios";
 // https://dev.to/vikirobles/how-to-create-an-auth-login-system-with-axios-interceptors-typescript-2k11
 
 const logOnDev = (message: string) => {
-  if (process.env.MODE === "development") {
+  if (process.env.NEXT_PUBLIC_NODE_ENV === "development") {
     console.log(message);
   }
 };
