@@ -8,18 +8,18 @@
 <li>Asset File System - import image dynamicaly V </li>
 <li>Router - by folder hierachy V </li>
 <li>page, component - round button component V</li>
-<li>Api - Axios, ReactQuery</li>
-<li>Login cookie</li>
+<li>Api - Axios, ReactQuery </li>
+<li>Login cookie </li>
 <li>Global state like redux </li>
 <li>Theme light, dark mode</li>
 <li>Testing </li>
-<li>Mui</li>
+<li>Mui </li>
 <li>dynamic header setting</li>
 <li>SEO for Google - sitemap </li>
-<li>Eslint, Prettier - npm install eslint --save-dev && npx eslint --init </li>
+<li>Eslint, Prettier V</li>
 <li>Husky </li>
 </ol>
 
 Official Docs ref: https://beta.nextjs.org/docs/upgrade-guide#migrating-from-pages-to-app
 
-structure ref: https://dev.to/vadorequest/a-2021-guide-about-structuring-your-next-js-project-in-a-flexible-and-efficient-way-472
+Test ref: https://dev-yakuza.posstree.com/en/react/nextjs/test/
