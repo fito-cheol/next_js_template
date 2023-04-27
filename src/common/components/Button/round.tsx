@@ -1,10 +1,10 @@
-import styles from "./round.module.scss";
+import styles from './round.module.scss';
 
 interface ButtonProps {
-  value: string;
+  label: string;
 }
 
 export default function ButtonRound(props: ButtonProps) {
-  const { value } = props;
-  return <button className={styles.button}>{value || ""}</button>;
+  const { label } = props;
+  return <button className={styles.button}>{label || ''}</button>;
 }
