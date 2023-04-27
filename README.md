@@ -16,7 +16,7 @@
 <li>Mui</li>
 <li>dynamic header setting</li>
 <li>SEO for Google - sitemap </li>
-<li>Eslint, Prettier </li>
+<li>Eslint, Prettier - npm install eslint --save-dev && npx eslint --init </li>
 <li>Husky </li>
 </ol>
 
