@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.scss";
 import Link from "next/link";
 import Head from "next/head";
+import ButtonRound from "common/components/Button/round";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           width={140}
           alt="belica"
         />
+        <ButtonRound value="i like round" />
       </div>
     </main>
   );

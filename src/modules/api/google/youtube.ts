@@ -1,4 +1,4 @@
-import customAxios from "app/api/googleAxios";
+import customAxios from "modules/api/googleAxios";
 
 // Ref: https://developers.google.com/youtube/v3/docs/videos/rate?hl=ko
 

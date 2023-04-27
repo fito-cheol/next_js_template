@@ -3,11 +3,11 @@
 ## To Do
 
 <ol>
-<li>Typescript with gloabal type</li> V
-<li>Sass with scoped and pre-loaded file for mixin</li>
-<li>Asset File System - import image dynamicaly </li>
-<li>Router</li>
-<li>page, component</li>
+<li>Typescript with gloabal type V</li> 
+<li>Sass with scoped and pre-loaded file for mixin V</li>
+<li>Asset File System - import image dynamicaly V </li>
+<li>Router - by folder hierachy V </li>
+<li>page, component - round button component V</li>
 <li>Api - Axios, ReactQuery</li>
 <li>Login cookie</li>
 <li>Global state like redux </li>
@@ -19,5 +19,7 @@
 <li>Eslint, Prettier </li>
 <li>Husky </li>
 </ol>
+
+Official Docs ref: https://beta.nextjs.org/docs/upgrade-guide#migrating-from-pages-to-app
 
 structure ref: https://dev.to/vadorequest/a-2021-guide-about-structuring-your-next-js-project-in-a-flexible-and-efficient-way-472
