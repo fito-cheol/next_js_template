@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google';
-import Header from 'common/components/header/header';
+
+import Appbar from 'common/components/appbar/basic';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,7 +19,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <Header />
+        <Appbar></Appbar>
+
         {children}
       </body>
     </html>
