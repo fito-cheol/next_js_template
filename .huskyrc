@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Load NVM support and all defined ENV variables
+source ~/.bash_profile
+
+# Check if this repo has .nvmrc file and use it to set proper Node.js version
+if test -f ".nvmrc"; then
+    nvm use
+fi
