@@ -16,6 +16,7 @@ export default function ButtonAppBar() {
   const router = useRouter();
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, pathname: string) => {
+    console.log('NEXT_PUBLIC_BACK_END_POINT', process.env.NEXT_PUBLIC_BACK_END_POINT);
     if (event.ctrlKey) {
       window.open(pathname, '_blank');
     } else {

@@ -1,19 +1,18 @@
 import React from 'react';
+import { getJson } from 'modules/api/test/sample';
+import Server from './server';
 
-export async function getData() {
-  await new Promise(res => setTimeout(res, 1000));
-  const data = {
-    title: 'Server and Client components',
-  };
-  return data;
+interface BookInfo {
+  title: string;
+  description: string;
 }
 
 export default async function ServerAndClient() {
-  const data = await getData();
+  const data = await getJson();
   return (
     <div className='flex h-full w-full flex-col items-center justify-center bg-gray-100 '>
       <h1 className='text-3xl font-bold'>Server and Client Components</h1>
-
+      <Server bookInfo={data} />
       <div className='flex w-full max-w-3xl flex-col space-y-8 rounded-lg bg-white p-4 shadow'></div>
     </div>
   );
