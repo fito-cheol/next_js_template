@@ -8,15 +8,15 @@
 <li>Asset File System - import image dynamicaly V </li>
 <li>Router - by folder hierachy V </li>
 <li>page, component - round button component V</li>
+<li>Testing - Unit test V </li>
+<li>Eslint, Prettier V</li>
 <li>Api - Axios, ReactQuery </li>
 <li>Login cookie </li>
 <li>Global state like redux </li>
-<li>Theme light, dark mode</li>
-<li>Testing </li>
-<li>Mui </li>
+<li>NextUI - Theme light, dark mode </li>
 <li>dynamic header setting</li>
 <li>SEO for Google - sitemap </li>
-<li>Eslint, Prettier V</li>
+
 <li>Husky </li>
 </ol>
 
