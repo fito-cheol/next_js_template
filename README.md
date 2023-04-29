@@ -11,13 +11,14 @@
 <li> Testing - Unit test V </li>
 <li> Eslint, Prettier V</li>
 <li> MUI - dark theme only V </li>
-<li> Api - Axios, ReactQuery </li>
+<li> Api - Axios V </li>
+<li> Husky V </li>
+<li> ReactQuery - in hook folder (use Transtack Query) </li>
 <li> Login cookie </li>
 <li> Global state like redux </li>
-<li> dynamic header setting</li>
 <li> SEO for Google - sitemap </li>
-<li> Translate If necessary </li>
-<li>Husky </li>
+<li> Localization If necessary - next-translate </li>
+
 </ol>
 
 Official Docs ref: https://beta.nextjs.org/docs/upgrade-guide#migrating-from-pages-to-app
