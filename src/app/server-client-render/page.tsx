@@ -1,11 +1,10 @@
-import React from "react";
-import Client from "./Client";
-import Server from "./Server";
+import Client from './Client';
+import Server from './Server';
 
-export async function getData() {
-  await new Promise((res) => setTimeout(res, 1000));
+async function getData() {
+  await new Promise(res => setTimeout(res, 1000));
   const data = {
-    title: "Server and Client components",
+    title: 'Server and Client components',
   };
   return data;
 }

@@ -7,6 +7,5 @@
   "jsxBracketSameLine": false,
   "useTabs": false,
   "arrowParens": "avoid",
-  "jsxSingleQuote": true,
   "trailingComma": "all"
 }

@@ -1,14 +1,9 @@
-import {
-  AxiosError,
-  AxiosInstance,
-  AxiosRequestConfig,
-  AxiosResponse,
-} from "axios";
-import axios from "axios";
+import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import axios from 'axios';
 // https://dev.to/vikirobles/how-to-create-an-auth-login-system-with-axios-interceptors-typescript-2k11
 
 const logOnDev = (message: string) => {
-  if (process.env.NEXT_PUBLIC_NODE_ENV === "development") {
+  if (process.env.NEXT_PUBLIC_NODE_ENV === 'development') {
     console.log(message);
   }
 };
@@ -19,46 +14,51 @@ const onError = async (message: string) => {
 };
 
 function handleError(error: AxiosError | Error) {
-  if (axios.isAxiosError(error)) {
-    const { message } = error;
-    const { method, url } = error.config as AxiosRequestConfig;
-    const { statusText, status } = error.response as AxiosResponse;
-
-    logOnDev(
-      `🚨 [API] ${method?.toUpperCase()} ${url} | Error ${status} ${message}`
-    );
-
-    switch (status) {
-      case 401: {
-        onError("로그인이 필요합니다.");
-        break;
-      }
-      case 403: {
-        onError("권한이 없습니다.");
-        break;
-      }
-      case 404: {
-        onError("잘못된 요청입니다.");
-        break;
-      }
-      case 500: {
-        onError("서버에 문제가 발생했습니다.");
-        break;
-      }
-      default: {
-        onError("알 수 없는 오류가 발생했습니다.");
-        break;
-      }
-    }
-  } else {
+  if (!axios.isAxiosError(error)) {
     logOnDev(`🚨 [API] | Error ${error.message}`);
     onError(error.message);
+    return;
+  }
+  const { message } = error;
+  const { method, url } = error.config as AxiosRequestConfig;
+
+  if (!error.response) {
+    logOnDev(`🚨 [API] ${method?.toUpperCase()} ${url} | Error status Undefined ${message}`);
+    onError('알 수 없는 오류가 발생했습니다.');
+    return;
+  }
+
+  const { status } = error.response as AxiosResponse;
+
+  logOnDev(`🚨 [API] ${method?.toUpperCase()} ${url} | Error ${status} ${message}`);
+
+  switch (status) {
+    case 401: {
+      onError('로그인이 필요합니다.');
+      break;
+    }
+    case 403: {
+      onError('권한이 없습니다.');
+      break;
+    }
+    case 404: {
+      onError('잘못된 요청입니다.');
+      break;
+    }
+    case 500: {
+      onError('서버에 문제가 발생했습니다.');
+      break;
+    }
+    default: {
+      onError('알 수 없는 오류가 발생했습니다.');
+      break;
+    }
   }
 }
 
-const onRequest = (config: AxiosRequestConfig): AxiosRequestConfig => {
+const onRequest = (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
   const { method, url } = config;
-  if (method === "get") {
+  if (method === 'get') {
     config.params = {
       ...config.params,
       _t: Date.now(),
@@ -78,9 +78,7 @@ const onResponseError = (error: AxiosError | Error): Promise<AxiosError> => {
   return Promise.reject(error);
 };
 
-export default function setupInterceptorsTo(
-  axiosInstance: AxiosInstance
-): AxiosInstance {
+export default function setupInterceptorsTo(axiosInstance: AxiosInstance): AxiosInstance {
   axiosInstance.interceptors.request.use(onRequest);
 
   axiosInstance.interceptors.response.use(onResponseSuccess, onResponseError);
