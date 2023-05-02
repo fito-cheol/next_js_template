@@ -1,0 +1,11 @@
+version: '3'
+services:
+  next:
+    build: # 빌드할 dockerfile경로
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000-3002:3000'
+    deploy:
+      mode: replicated
+      replicas: 3

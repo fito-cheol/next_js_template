@@ -1,0 +1,9 @@
+version: '3'
+services:
+  next:
+    container_name: next-green
+    build: # 빌드할 dockerfile경로
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3001:3000'
